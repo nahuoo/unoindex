@@ -13,6 +13,7 @@ import {
   PopoverContent,
   useColorModeValue,
   useBreakpointValue,
+  SimpleGrid,
   useDisclosure,
   Image,
 } from '@chakra-ui/react'
@@ -117,7 +118,7 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue('white', 'gray.800')
 
   return (
-    <Stack direction={'row'} spacing={4}>
+    <Stack direction={'row'} spacing={2}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
@@ -144,13 +145,16 @@ const DesktopNav = () => {
                 bg={popoverContentBgColor}
                 p={4}
                 rounded={'xl'}
-                minW={'sm'}
+                minW={'2xl'}
               >
                 <Stack>
+                  <SimpleGrid columns={2} spacing={2}>
                   {navItem.children.map((child) => (
                     <DesktopSubNav key={child.label} {...child} />
-                  ))}
+                    ))}
+                    </SimpleGrid>
                 </Stack>
+                
               </PopoverContent>
             )}
           </Popover>
@@ -162,10 +166,10 @@ const DesktopNav = () => {
 
 const DesktopSubNav = (NAV_ITEMS) => {
   return (
-    <Link
+    <Link     
       href={NAV_ITEMS.href}
       role={'group'}
-      display={'block'}
+      display={'flex'}
       p={2}
       rounded={'md'}
       _hover={{ bg: useColorModeValue('gray.50', 'gray.900') }}
@@ -266,16 +270,76 @@ const MobileNavItem = (NAV_ITEMS) => {
 
 const NAV_ITEMS = [
   {
-    label: 'obejtioooooo',
+    label: 'Equipos',
     children: [
       {
-        label: 'Explore Design Work',
-        subLabel: 'Trending Design to inspire you',
+        label: 'Agitadores',
+        subLabel: '',
         href: '#',
       },
       {
-        label: 'HOLA',
-        subLabel: 'Up-and-coming Designers',
+        label: 'Autoanalizadores de quimica clinica',
+        subLabel: '',
+        href: '#',
+      },
+      {
+        label: 'Baño termicos',
+        subLabel: '',
+        href: '#',
+      },
+      {
+        label: 'Biomarcadores de urgencia',
+        subLabel: '',
+        href: '#',
+      },
+      {
+        label: 'Cabinas flujo laminar',
+        subLabel: '',
+        href: '#',
+      },
+      {
+        label: 'Centrífugas',
+        subLabel: '',
+        href: '#',
+      },
+      {
+        label: 'Coagulómetros',
+        subLabel: '',
+        href: '#',
+      },
+      {
+        label: 'Contadores hematológicos',
+        subLabel: '',
+        href: '#',
+      },
+      {
+        label: 'Estufas de cultivo',
+        subLabel: '',
+        href: '#',
+      },
+      {
+        label: 'Estufas de esterilización',
+        subLabel: '',
+        href: '#',
+      },
+      {
+        label: 'Gases en sangre',
+        subLabel: '',
+        href: '#',
+      },
+      {
+        label: 'Ion Selectivo',
+        subLabel: '',
+        href: '#',
+      },
+      {
+        label: 'Microscopios',
+        subLabel: '',
+        href: '#',
+      },
+      {
+        label: 'Quimioluminiscencia',
+        subLabel: '',
         href: '#',
       },
     ],

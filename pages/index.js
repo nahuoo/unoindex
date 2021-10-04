@@ -4,6 +4,7 @@ import Hero from '../components/Hero'
 import Features from '../components/Features'
 import ColumnFeatures from '../components/ColumnFeatures'
 import {createClient} from 'contentful'
+import { SliderSection } from '../components/SliderSection'
 
 export async function getStaticProps() {
 
@@ -34,6 +35,7 @@ export default function Home(equipos) {
       <main>
         <NavBar />
         <Hero equipos={{equipos}}/>
+        
         <Features />
         <ColumnFeatures />
       </main>

@@ -39,9 +39,6 @@ const Hero =(equipos) => {
   
 
 // CFPAT-jPyP2S48v4RODt-hfoNeywkAYgBIxx-571Z5tGR-3rY
-  
-  const hola = () => console.log(equipos.equipos.equipos)
-  
 
     return (
       <Container maxW={'7xl'} bgImage="url('https://www.transparenttextures.com/patterns/connected.png')" >
@@ -52,7 +49,6 @@ const Hero =(equipos) => {
           pl={10}
           direction={{ base: 'column', md: 'row' }}>
           <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-            <button onClick={hola}> NECESITO UN HACKER EPICO </button> 
             <Heading
               lineHeight={1.2}
               fontWeight={800}
