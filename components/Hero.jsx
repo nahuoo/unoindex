@@ -35,7 +35,7 @@ import {
    
     */
   
-const Hero =(equipos) => {
+const Hero =() => {
   
 
 // CFPAT-jPyP2S48v4RODt-hfoNeywkAYgBIxx-571Z5tGR-3rY
@@ -46,7 +46,7 @@ const Hero =(equipos) => {
           align={'center'}
           spacing={{ base: 8, md: 10 }}
           py={{ base: 20, md: 28 }}
-          pl={10}
+          pl={{ base:0, md:10}}
           direction={{ base: 'column', md: 'row' }}>
           <Stack flex={1} spacing={{ base: 5, md: 10 }}>
             <Heading
@@ -58,18 +58,6 @@ const Hero =(equipos) => {
                 as={'span'}
                 color={'red.base'}
                 position={'relative'}
-              /*  _after={{
-                    content: "''",
-                    width: 'full',
-                    height: '30%',
-                    position: 'absolute',
-                    bottom: 1,
-                    left: 0,
-                    bg: 'gray.300',
-                    zIndex: -1,
-                  }}
-                */
-               
                 >
                 Uno
               </Text>

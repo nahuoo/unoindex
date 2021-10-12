@@ -29,23 +29,23 @@ export default function SimpleThreeColumns() {
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
         <Feature
           icon={<Icon as={ChatIcon} w={10} h={10} />}
-          title={'Lifetime Support'}
+          title={'Representantes'}
           text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+            'Representantes oficial de importantes marcas'
           }
         />
         <Feature
           icon={<Icon as={InfoIcon} w={10} h={10} />}
-          title={'Unlimited Donations'}
+          title={'Mantenimientos'}
           text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+            'Mas de 30 años de servicio técnico'
           }
         />
         <Feature
           icon={<Icon as={StarIcon} w={10} h={10} />}
-          title={'Instant Delivery'}
+          title={'Comprometidos'}
           text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+            'Buscamos la mejor solución para cada laboratorio'
           }
         />
       </SimpleGrid>

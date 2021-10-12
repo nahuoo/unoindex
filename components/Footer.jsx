@@ -12,7 +12,7 @@ import {
   useColorModeValue,
   Image,
 } from '@chakra-ui/react'
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaInstagram, FaFacebook, FaYoutube } from 'react-icons/fa'
 import { BiMailSend } from 'react-icons/bi'
 
 const Logo = (props) => {
@@ -70,71 +70,75 @@ const ListHeader = ({ children }) => {
 export default function LargeWithNewsletter() {
   return (
     <Box
-      bg={useColorModeValue('gray.50', 'gray.900')}
-      color={useColorModeValue('gray.700', 'gray.200')}
+      bg={useColorModeValue("gray.50", "gray.900")}
+      color={useColorModeValue("gray.700", "gray.200")}
     >
-      <Container as={Stack} maxW={'6xl'} py={10}>
+      <Container as={Stack} maxW={"6xl"} py={10}>
         <SimpleGrid
-          templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 2fr' }}
+          templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 2fr" }}
           spacing={8}
         >
           <Stack spacing={6}>
             <SimpleGrid columns={{ base: 1, md: 3 }}>
-              <Image
-                boxSize="50px"
-                src="/uno.png"
-                alt="Logo Uno"
-              />
-            <Text fontSize="sm">Uno Electromedicina</Text>
+              <Image boxSize="50px" src="/uno.png" alt="Logo Uno" />
+              <Text fontSize="sm">Uno Electromedicina</Text>
             </SimpleGrid>
-            <Text fontSize={'sm'}>
-              © 2021 Uno Electromedicina. 
-              Todos los derechos reservados
+            <Text fontSize={"sm"}>
+              © 2021 Uno Electromedicina. Todos los derechos reservados
             </Text>
-            <Stack direction={'row'} spacing={6}>
-              <SocialButton label={'Twitter'} href={'#'}>
-                <FaTwitter />
+            <Stack direction={"row"} spacing={6}>
+              <SocialButton
+                label={"Facebook"}
+                href={"https://www.facebook.com/uno.electromedicina"}
+              >
+                <FaFacebook />
               </SocialButton>
-              <SocialButton label={'YouTube'} href={'#'}>
-                <FaYoutube />
-              </SocialButton>
-              <SocialButton label={'Instagram'} href={'#'}>
+              <SocialButton
+                label={"Instagram"}
+                href={"https://www.instagram.com/unoelectromedicina"}
+              >
                 <FaInstagram />
               </SocialButton>
             </Stack>
           </Stack>
-          <Stack align={'flex-start'}>
+          <Stack align={"flex-start"}>
             <ListHeader>Empresa</ListHeader>
-            <Link href={'https://www.google.com.ar/maps/dir//Chaco+801,+B7600BKQ+Mar+del+Plata,+Buenos+Aires,+Argentina/@-37.982938,-57.5634771,16z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x9584d95a18c9fcd9:0x9d2f9ec1205da2e9!2m2!1d-57.5590997!2d-37.9829465!3e2'}>Ubicación</Link>
-            <Link href={'tel:02234739018'}>Teléfono</Link>
-            <Link href={'tel:5492236800944'}>Celular</Link>
-            <Link href={'https://api.whatsapp.com/send?phone=5492236800944'}>WhatsApp</Link>
-            <Link href={'mailto:unoelectromedicina@gmail.com'}>Email</Link>
+            <Link
+              href={
+                "https://www.google.com.ar/maps/dir//Chaco+801,+B7600BKQ+Mar+del+Plata,+Buenos+Aires,+Argentina/@-37.982938,-57.5634771,16z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x9584d95a18c9fcd9:0x9d2f9ec1205da2e9!2m2!1d-57.5590997!2d-37.9829465!3e2"
+              }
+            >
+              Ubicación
+            </Link>
+            <Link href={"tel:02234739018"}>Teléfono</Link>
+            <Link href={"tel:5492236800944"}>Celular</Link>
+            <Link href={"https://api.whatsapp.com/send?phone=5492236800944"}>
+              WhatsApp
+            </Link>
+            <Link href={"mailto:unoelectromedicina@gmail.com"}>Email</Link>
           </Stack>
-          <Stack align={'flex-start'}>
+          <Stack align={"flex-start"}>
             <ListHeader>Productos</ListHeader>
-            <Link href={'#'}>Equipos</Link>
-            <Link href={'#'}>Descartables</Link>
-            <Link href={'#'}>Insumos</Link>
-            <Link href={'#'}>123</Link>
-            <Link href={'#'}>321</Link>
+            <Link href={"#"}>Equipos</Link>
+            <Link href={"#"}>Descartables</Link>
+            <Link href={"#"}>Insumos</Link>
           </Stack>
-          <Stack align={'flex-start'}>
+          <Stack align={"flex-start"}>
             <ListHeader>Promociones</ListHeader>
-            <Stack direction={'row'}>
+            <Stack direction={"row"}>
               <Input
-                placeholder={'tu email'}
-                bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+                placeholder={"tu email"}
+                bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
                 border={0}
                 _focus={{
-                  bg: 'whiteAlpha.300',
+                  bg: "whiteAlpha.300",
                 }}
               />
               <IconButton
-                bg={useColorModeValue('red.base', 'green.800')}
-                color={useColorModeValue('white', 'gray.800')}
+                bg={useColorModeValue("red.base", "green.800")}
+                color={useColorModeValue("white", "gray.800")}
                 _hover={{
-                  bg: 'red.hover',
+                  bg: "red.hover",
                 }}
                 aria-label="Subscribite"
                 icon={<BiMailSend />}
@@ -144,5 +148,5 @@ export default function LargeWithNewsletter() {
         </SimpleGrid>
       </Container>
     </Box>
-  )
+  );
 }

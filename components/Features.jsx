@@ -32,7 +32,7 @@ import {
   
   export default function SplitWithImage() {
     return (
-      <Container maxW={'5xl'} py={12} bgImage="url('https://www.transparenttextures.com/patterns/connected.png')">
+      <Container maxW={'5xl'} py={12} bgImage="https://www.transparenttextures.com/patterns/connected.png'">
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
           <Stack spacing={4}>       
             <Heading>Servicios integrales</Heading>
@@ -49,7 +49,7 @@ import {
               <Feature              
                 icon={<Icon as={TriangleUpIcon} color={'cyan.200'} w={5} h={5} />}
                 iconBg={useColorModeValue('gray.100', 'yellow.900')}
-                text={'Mantenimiento Productivos'}
+                text={'Mantenimiento preventivos'}
               />
               <Feature
                 icon={<Icon as={TriangleUpIcon} color={'cyan.400'} w={5} h={5} />}
@@ -70,7 +70,7 @@ import {
               rounded={'md'}
               alt={'feature image'}
               src={
-                '/taller.jpg'
+                '/frente.jpg'
               }
               objectFit={'cover'}
             />

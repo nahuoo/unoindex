@@ -28,7 +28,7 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
 
   return (
-    <Box pos="fixed" boxShadow="base" w="100%" zIndex={2}>
+    <Box pos="fixed" boxShadow="base" w="100%" zIndex={30}>
       <Flex
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
@@ -346,18 +346,7 @@ const NAV_ITEMS = [
   },
   {
     label: 'Nosotros',
-    children: [
-      {
-        label: 'Job Board',
-        subLabel: 'Find your dream design job',
-        href: '#',
-      },
-      {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
-        href: '#',
-      },
-    ],
+    href: '#about',
   },
   {
     label: 'Ubicación',

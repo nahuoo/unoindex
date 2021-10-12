@@ -5,26 +5,28 @@ import Features from '../components/Features'
 import ColumnFeatures from '../components/ColumnFeatures'
 import {createClient} from 'contentful'
 import { SliderSection } from '../components/SliderSection'
+import { Newsletter } from '../components/newsletter'
+import { Contact } from '../components/contact'
+import { AboutUs } from '../components/AboutUs'
 
 export async function getStaticProps() {
 
-  const client = createClient({
-    space: 'ftv5t2jre3bg',
-    accessToken: '4qNarz5C8ZqLGHZFXdvdsEe2OehC3fxp1Qnx_EfNKHI',
-  })
+  const res = await fetch(`https://res.cloudinary.com/unoelectromedicina/image/list/logo.json`)
+  const data = await res.json()
 
-
-
-  const res = await client.getEntries({ content_type: "equipo" })
-
-  return {
-    props: {
-      equipos: res.items
+  if (!data) {
+    return {
+      notFound: true,
     }
   }
-}
 
-export default function Home(equipos) {
+  return {
+    props: { data },
+  }
+}
+   
+
+export default function Home({data}) {
   return (
     <div>
       <Head>
@@ -34,12 +36,16 @@ export default function Home(equipos) {
       </Head>
       <main>
         <NavBar />
-        <Hero equipos={{equipos}}/>
-        
+        <Hero />
+        <SliderSection data={data} />
         <Features />
         <ColumnFeatures />
+        <Newsletter />
+        <AboutUs />
+        <Contact />
       </main>
     </div>
   )
 }
+//<SliderSection />
 //Teal 200

@@ -1,30 +1,16 @@
 import React from "react"
-import Image from 'next/image'
+import { SimpleGrid, Image } from "@chakra-ui/react"
 
-//https://res.cloudinary.com/uno-electromedicina/image/upload/v1633365862/logos/zeiss_fmbctj.png
-
-export const SliderSection = () => {
-    return(
-        
-        <Splide
-            options={{
-                type: 'loop',
-                gap: '1rem',
-                autoplay: true,
-                pauseOnHover: false,
-                resetProgress: false,
-                arrows: 'slider',
-            }}>   
-            <SplideSlide>                             
-             <Image
-              src="https://res.cloudinary.com/fay/image/upload/v1617047570/galaxy_ne5p8f.jpg"
-               alt="Galaxy"
-                width={1000}
-                height={750}
-             />             
-            </SplideSlide>
-            
-        </Splide>
-      
-    )
-} 
+export const SliderSection = ({data}) => {
+  return (
+    <SimpleGrid p='20px' alignItems='center' minChildWidth="120px" spacing="20px">
+      {data.resources.map((image) => (
+        <Image
+          key={image.public_id}
+          src={`https://res.cloudinary.com/unoelectromedicina/image/upload/v1633365862/${image.public_id}.jpg`}
+          alt={image.public_id}
+        />
+      ))}
+    </SimpleGrid>
+  );
+};

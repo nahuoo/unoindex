@@ -7,6 +7,9 @@ const theme = extendTheme({
     heading: "Georgia, serif",
     mono: "Menlo, monospace",
   },
+  global:{
+    html: {scrollbehavior: 'inside'}
+  },
   colors: {
     transparent: "transparent",
     red:{ 
