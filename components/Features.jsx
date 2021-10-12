@@ -32,47 +32,56 @@ import {
   
   export default function SplitWithImage() {
     return (
-      <Container maxW={'5xl'} py={12} bgImage="https://www.transparenttextures.com/patterns/connected.png'">
+      <Container
+        maxW={"5xl"}
+        py={12}
+        bgImage="https://www.transparenttextures.com/patterns/connected.png'"
+      >
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-          <Stack spacing={4}>       
+          <Stack spacing={4}>
             <Heading>Servicios integrales</Heading>
-            <Text color={'gray.500'} fontSize={'lg'}>
-            Ofrecemos soluciónes para laboratorios de análisis clínicos
+            <Text color={"gray.500"} fontSize={"lg"}>
+              Valoramos la experiencia de nuestros clientes, por eso
+              representamos marcas que trabajan día a día bajo el objetivo de
+              optimizar la salud en la región.
             </Text>
             <Stack
               spacing={4}
               divider={
                 <StackDivider
-                  borderColor={useColorModeValue('gray.100', 'gray.700')}
+                  borderColor={useColorModeValue("gray.100", "gray.700")}
                 />
-              }>
-              <Feature              
-                icon={<Icon as={TriangleUpIcon} color={'cyan.200'} w={5} h={5} />}
-                iconBg={useColorModeValue('gray.100', 'yellow.900')}
-                text={'Mantenimiento preventivos'}
-              />
+              }
+            >
               <Feature
-                icon={<Icon as={TriangleUpIcon} color={'cyan.400'} w={5} h={5} />}
-                iconBg={useColorModeValue('gray.100', 'green.900')}
-                text={'Servicio técnico oficial'}
+                icon={
+                  <Icon as={TriangleUpIcon} color={"cyan.200"} w={5} h={5} />
+                }
+                iconBg={useColorModeValue("gray.100", "yellow.900")}
+                text={"Mantenimiento preventivos"}
               />
               <Feature
                 icon={
-                  <Icon as={TriangleUpIcon} color={'cyan.600'} w={5} h={5} />
+                  <Icon as={TriangleUpIcon} color={"cyan.400"} w={5} h={5} />
                 }
-                iconBg={useColorModeValue('gray.100', 'purple.900')}
-                text={'Instalación de laboratorios'}
+                iconBg={useColorModeValue("gray.100", "green.900")}
+                text={"Servicio técnico oficial"}
+              />
+              <Feature
+                icon={
+                  <Icon as={TriangleUpIcon} color={"cyan.600"} w={5} h={5} />
+                }
+                iconBg={useColorModeValue("gray.100", "purple.900")}
+                text={"Instalación de laboratorios"}
               />
             </Stack>
           </Stack>
           <Flex>
             <Image
-              rounded={'md'}
-              alt={'feature image'}
-              src={
-                '/frente.jpg'
-              }
-              objectFit={'cover'}
+              rounded={"md"}
+              alt={"feature image"}
+              src={"/frente.jpg"}
+              objectFit={"cover"}
             />
           </Flex>
         </SimpleGrid>
