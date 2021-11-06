@@ -8,6 +8,7 @@ import { SliderSection } from '../components/SliderSection'
 import { Newsletter } from '../components/newsletter'
 import { Contact } from '../components/contact'
 import { AboutUs } from '../components/AboutUs'
+import { Carrousel } from '../components/Carrousel'
 
 export async function getStaticProps() {
 
@@ -36,7 +37,7 @@ export default function Home({data}) {
       </Head>
       <main>
         <NavBar />
-        <Hero />
+        <Carrousel />
         <SliderSection data={data} />
         <Features />
         <ColumnFeatures />
