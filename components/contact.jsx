@@ -115,12 +115,7 @@ export const Contact = () => {
           form
         </Stack>
       </Container>
-      <Blur
-        position={"absolute"}
-        top={-10}
-        left={-10}
-        style={{ filter: "blur(70px)" }}
-      />
+     
     </Box>
   );
 };
