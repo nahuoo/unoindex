@@ -11,7 +11,6 @@ import {
   Popover,
   PopoverTrigger,
   PopoverContent,
-  useColorModeValue,
   useBreakpointValue,
   SimpleGrid,
   useDisclosure,
@@ -30,14 +29,14 @@ export default function WithSubnavigation() {
   return (
     <Box pos="fixed" boxShadow="base" w="100%" zIndex={30}>
       <Flex
-        bg={useColorModeValue('white', 'gray.800')}
-        color={useColorModeValue('gray.600', 'white')}
+        bg='white'
+        color='gray.600'
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
         borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.900')}
+        borderColor='gray.200'
         align={'center'}
       >
         <Flex
@@ -113,9 +112,9 @@ export default function WithSubnavigation() {
 }
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue('gray.600', 'gray.200')
-  const linkHoverColor = useColorModeValue('gray.800', 'white')
-  const popoverContentBgColor = useColorModeValue('white', 'gray.800')
+  const linkColor ='gray.600'
+  const linkHoverColor ='gray.800'
+  const popoverContentBgColor ='white'
 
   return (
     <Stack direction={'row'} spacing={2}>
@@ -172,7 +171,7 @@ const DesktopSubNav = (NAV_ITEMS) => {
       display={'flex'}
       p={2}
       rounded={'md'}
-      _hover={{ bg: useColorModeValue('gray.50', 'gray.900') }}
+      _hover={{ bg: 'gray.50' }}
     >
       <Stack direction={'row'} align={'center'}>
         <Box>
@@ -204,7 +203,7 @@ const DesktopSubNav = (NAV_ITEMS) => {
 const MobileNav = () => {
   return (
     <Stack
-      bg={useColorModeValue('white', 'gray.800')}
+      bg='white'
       p={4}
       display={{ md: 'none' }}
     >
@@ -232,7 +231,7 @@ const MobileNavItem = (NAV_ITEMS) => {
       >
         <Text
           fontWeight={600}
-          color={useColorModeValue('gray.600', 'gray.200')}
+          color='gray.600'
         >
           {NAV_ITEMS.label}
         </Text>
@@ -253,7 +252,7 @@ const MobileNavItem = (NAV_ITEMS) => {
           pl={4}
           borderLeft={1}
           borderStyle={'solid'}
-          borderColor={useColorModeValue('gray.200', 'gray.700')}
+          borderColor='gray.200'
           align={'start'}
         >
           {NAV_ITEMS.children &&

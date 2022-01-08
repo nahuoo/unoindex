@@ -108,7 +108,7 @@ const stats = [
     title: "Quimica Clínica",
     content: (
       <>
-        <StatsText>In Vitro</StatsText> blablabla
+        <StatsText>In Vitro</StatsText> 
       </>
     ),
   },
@@ -124,7 +124,7 @@ const stats = [
     title: "250+",
     content: (
       <>
-        <StatsText>Ciudades</StatsText> donde enviamos
+        <StatsText>Ciudades</StatsText> confian en nosotros
       </>
     ),
   },

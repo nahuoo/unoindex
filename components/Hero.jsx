@@ -11,7 +11,6 @@ import {
     IconButton,
     createIcon,
     IconProps,
-    useColorModeValue,
   } from '@chakra-ui/react';
   import {useEffect} from 'react'
  
@@ -43,7 +42,9 @@ const Hero =() => {
     return (
       <Container
         maxW={"7xl"}
-        bgImage="url('https://www.transparenttextures.com/patterns/connected.png')"
+       bg={'#fcfcfc'}
+       bgImage={'url("https://www.transparenttextures.com/patterns/connected.png")'}
+
       >
         <Stack
           align={"center"}
@@ -86,7 +87,7 @@ const Hero =() => {
             >
               <Button
                 zIndex={99}
-                onClick={() => getStaticProps}
+                
                 rounded={"full"}
                 size={"lg"}
                 fontWeight={"normal"}

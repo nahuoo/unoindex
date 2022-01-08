@@ -9,7 +9,6 @@ import {
   VisuallyHidden,
   Input,
   IconButton,
-  useColorModeValue,
   Image,
 } from '@chakra-ui/react'
 import { FaInstagram, FaFacebook, FaYoutube } from 'react-icons/fa'
@@ -38,7 +37,7 @@ const Logo = (props) => {
 const SocialButton = ({ children, label, href }) => {
   return (
     <chakra.button
-      bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+      bg='blackAlpha.100'
       rounded={'full'}
       w={8}
       h={8}
@@ -50,7 +49,7 @@ const SocialButton = ({ children, label, href }) => {
       justifyContent={'center'}
       transition={'background 0.3s ease'}
       _hover={{
-        bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
+        bg:'blackAlpha.200'
       }}
     >
       <VisuallyHidden>{label}</VisuallyHidden>
@@ -70,8 +69,8 @@ const ListHeader = ({ children }) => {
 export default function LargeWithNewsletter() {
   return (
     <Box
-      bg={useColorModeValue("gray.50", "gray.900")}
-      color={useColorModeValue("gray.700", "gray.200")}
+      bg="gray.50"
+      color="gray.700"
     >
       <Container as={Stack} maxW={"6xl"} py={10}>
         <SimpleGrid
@@ -128,15 +127,15 @@ export default function LargeWithNewsletter() {
             <Stack direction={"row"}>
               <Input
                 placeholder={"tu email"}
-                bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+                bg="blackAlpha.100"
                 border={0}
                 _focus={{
                   bg: "whiteAlpha.300",
                 }}
               />
               <IconButton
-                bg={useColorModeValue("red.base", "green.800")}
-                color={useColorModeValue("white", "gray.800")}
+                bg="red.base"
+                color="white"
                 _hover={{
                   bg: "red.hover",
                 }}

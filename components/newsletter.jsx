@@ -6,7 +6,6 @@ import {
   Input,
   Button,
   Icon,
-  useColorModeValue,
   createIcon,
 } from "@chakra-ui/react";
 
@@ -17,11 +16,11 @@ export const Newsletter = () => {
       align={"center"}
       justify={"center"}
       py={12}
-      bg={useColorModeValue("gray.50", "gray.800")}
+      bg="gray.50"
     >
       <Stack
         boxShadow={"2xl"}
-        bg={useColorModeValue("white", "gray.700")}
+        bg="white"
         rounded={"xl"}
         p={10}
         spacing={8}
@@ -32,7 +31,7 @@ export const Newsletter = () => {
           <Heading
             textTransform={"uppercase"}
             fontSize={"3xl"}
-            color={useColorModeValue("gray.800", "gray.200")}
+            color="gray.800"
           >
             Suscribirse
           </Heading>
@@ -44,12 +43,12 @@ export const Newsletter = () => {
           <Input
             type={"text"}
             placeholder={"email"}
-            color={useColorModeValue("gray.800", "gray.200")}
-            bg={useColorModeValue("gray.100", "gray.600")}
+            color="gray.800"
+            bg="gray.100"
             rounded={"full"}
             border={0}
             _focus={{
-              bg: useColorModeValue("gray.200", "gray.800"),
+              bg: "gray.200",
               outline: "none",
             }}
           />

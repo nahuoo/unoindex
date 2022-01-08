@@ -43,21 +43,21 @@ export const Carrousel = () => {
     {
       title: "",
       text: "",
-      image:
-        "/bannere322.png",
+      imageBase: "/Bannere32Base.png",
+      image: "/bannere322.png",
     },
     {
       title: "",
       text: "",
-      image:
-        "/bannerDiestro.png",
-    }
+      imageBase: "/BannerDiestroBase.png",
+      image: "/bannerDiestro.png",
+    },
   ];
 
   return (
     <Box
       position={"relative"}
-      height={"600px"}
+      height={{ base: "100vh", lg: "600px" }}
       width={"full"}
       overflow={"hidden"}
     >
@@ -109,8 +109,11 @@ export const Carrousel = () => {
             position="relative"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
-            backgroundSize="cover"
-            backgroundImage={`url(${card.image})`}
+            backgroundSize={{ base: "cover", lg: "cover" }}
+            backgroundImage={{
+              base: `url(${card.imageBase})`,
+              lg: `url(${card.image})`,
+            }}
           >
             {/* This is the block you need to change, to customize the caption */}
             <Container size="container.lg" height="600px" position="relative">

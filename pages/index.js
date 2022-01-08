@@ -6,7 +6,7 @@ import ColumnFeatures from '../components/ColumnFeatures'
 import {createClient} from 'contentful'
 import { SliderSection } from '../components/SliderSection'
 import { Newsletter } from '../components/newsletter'
-import { Contact } from '../components/contact'
+import { Contact }  from '../components/Contact'
 import { AboutUs } from '../components/AboutUs'
 import { Carrousel } from '../components/Carrousel'
 
@@ -41,12 +41,11 @@ export default function Home({data}) {
         <SliderSection data={data} />
         <Features />
         <ColumnFeatures />
-        <Newsletter />
         <AboutUs />
         <Contact />
       </main>
     </div>
-  )
+  );
 }
 //<SliderSection />
 //Teal 200

@@ -6,24 +6,29 @@ import {
   StackDivider,
   Stack,
   Heading,
-  useColorModeValue,
 } from "@chakra-ui/react";
 
 export const SliderSection = ({data}) => {
   return (
     <>
       <SimpleGrid
-        p={8}
+        bg={"#fcfcfc"}
+        bgImage={
+          'url("https://www.transparenttextures.com/patterns/connected.png")'
+        }
+        p={20}
         textAlign={"center"}
       >
-        <Heading color={"gray.500"}>Confian en nosotros:</Heading>
+        <Heading color={"gray.700"}>
+          Mas de 20+ marcas confían en nosotros:
+        </Heading>
         <Stack
-          spacing={4}
-          divider={
-            <StackDivider
-              borderColor={useColorModeValue("gray.100", "gray.700")}
-            />
+          bg={"#fcfcfc"}
+          bgImage={
+            'url("https://www.transparenttextures.com/patterns/connected.png")'
           }
+          spacing={4}
+          divider={<StackDivider borderColor="gray.100" />}
         />
       </SimpleGrid>
       <SimpleGrid
@@ -31,6 +36,11 @@ export const SliderSection = ({data}) => {
         alignItems="center"
         minChildWidth="120px"
         spacing="20px"
+        pb={10}
+        bg={"#fcfcfc"}
+        bgImage={
+          'url("https://www.transparenttextures.com/patterns/connected.png")'
+        }
       >
         {data.resources.map((image) => (
           <Image

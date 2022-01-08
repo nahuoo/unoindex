@@ -1,4 +1,4 @@
-import { ChakraProvider, extendTheme } from "@chakra-ui/react"
+import { background, ChakraProvider, extendTheme } from "@chakra-ui/react"
 import Footer from '../components/Footer'
 
 const theme = extendTheme({
@@ -7,18 +7,19 @@ const theme = extendTheme({
     heading: "Georgia, serif",
     mono: "Menlo, monospace",
   },
-  global:{
-    html: {scrollbehavior: 'inside'}
+  global: {
+    html: { scrollbehavior: "inside", background: "white" },
   },
   colors: {
     transparent: "transparent",
-    red:{ 
-      base:"#C60B0B",
-      hover:"#940E0E"
+    red: {
+      base: "#C60B0B",
+      hover: "#940E0E",
     },
-    verde:'#43C7DA',
+    white: "#F6F5F5",
+    verde: "#43C7DA",
   },
-})
+});
 
 function MyApp({ Component, pageProps }) {
   return (
