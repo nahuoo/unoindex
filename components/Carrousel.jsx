@@ -44,13 +44,13 @@ export const Carrousel = () => {
       title: "",
       text: "",
       imageBase: "/Bannere32Base.png",
-      image: "/bannere322.png",
+      image: "/Bannere322.png",
     },
     {
       title: "",
       text: "",
       imageBase: "/BannerDiestroBase.png",
-      image: "/bannerDiestro.png",
+      image: "/BannerDiestro.png",
     },
   ];
 
