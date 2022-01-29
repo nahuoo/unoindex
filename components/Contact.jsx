@@ -1,4 +1,5 @@
 import React from "react"
+import { useForm, ValidationError } from "@formspree/react"
 import {
   Box,
   Button,
@@ -12,6 +13,7 @@ import {
   InputLeftElement,
   Link,
   Stack,
+  Select,
   Textarea,
   Tooltip,
   useColorModeValue,
@@ -19,6 +21,7 @@ import {
 } from "@chakra-ui/react"
 import { FaInstagram, FaFacebook, FaRegEnvelope } from "react-icons/fa";
 export const Contact = () => {
+  const [state, handleSubmit] = useForm("xnqlwdgr");
   return (
     <Flex
       bg={useColorModeValue("gray.100", "gray.900")}
@@ -107,70 +110,89 @@ export const Contact = () => {
                 p={{ base: 3, lg: 8 }}
                 color={useColorModeValue("gray.700", "whiteAlpha.900")}
                 shadow="base"
-                fontSize={{ base: 'sm', lg: 0 }}
+                fontSize={{ base: "sm", lg: 0 }}
               >
-                <VStack spacing={5}>
-                  <FormControl isRequired>
-                    <FormLabel>Nombre</FormLabel>
+                <form onSubmit={handleSubmit}>
+                  <VStack spacing={5}>
+                    <FormControl isRequired>
+                      <FormLabel>Nombre</FormLabel>
 
-                    <InputGroup>
+                      <InputGroup>
+                        <Input
+                          type="text"
+                          name="Nombre"
+                          placeholder="Nombre y apellido"
+                        />
+                      </InputGroup>
+                    </FormControl>
+                    <FormControl isRequired>
+                      <FormLabel>Cantidad de pacientes por día</FormLabel>
 
-                      <Input
-                        type="text"
-                        name="name"
-                        placeholder="Nombre y apellido"
+                      <InputGroup>
+                        <Input
+                          type="number"
+                          name="Pacientes por dia"
+                          placeholder="Cantidad de muestras"
+                        />
+                      </InputGroup>
+                    </FormControl>
+
+                    <FormControl isRequired>
+                      <FormLabel>Tipo de laboratorio</FormLabel>
+
+                      <InputGroup>
+                        <Select
+                          placeholder="seleccionar"
+                          type="select"
+                          name="tipo de laboratorio"
+                        >
+                          <option value="Particular">Particular</option>
+                          <option value="Hospital">Hospital</option>
+                          <option value="Clinica">Clínica/Sanatorio</option>
+                          <option value="Veterinaria">Veterinaria</option>
+                          <option value="Investigacion">Investigación</option>
+                        </Select>
+                      </InputGroup>
+                    </FormControl>
+
+                    <FormControl isRequired>
+                      <FormLabel>Email</FormLabel>
+
+                      <InputGroup>
+                        <Input
+                          type="email"
+                          name="email"
+                          placeholder="email de contacto"
+                        />
+                      </InputGroup>
+                    </FormControl>
+
+                    <FormControl isRequired>
+                      <FormLabel>Mensaje</FormLabel>
+
+                      <Textarea
+                        name="message"
+                        placeholder="Escribinos..."
+                        rows={6}
+                        resize="none"
                       />
-                    </InputGroup>
-                  </FormControl>
-                  <FormControl isRequired>
-                    <FormLabel>Cantidad de muestras por día</FormLabel>
+                    </FormControl>
 
-                    <InputGroup>
-                     
-                      <Input
-                        type="number"
-                        name="muestras"
-                        placeholder="Cantidad de muestras"
-                      />
-                    </InputGroup>
-                  </FormControl>
-
-                  <FormControl isRequired>
-                    <FormLabel>Email</FormLabel>
-
-                    <InputGroup>
-                    
-                      <Input
-                        type="email"
-                        name="email"
-                        placeholder="email de contacto"
-                      />
-                    </InputGroup>
-                  </FormControl>
-
-                  <FormControl isRequired>
-                    <FormLabel>Mensaje</FormLabel>
-
-                    <Textarea
-                      name="message"
-                      placeholder="Escribinos..."
-                      rows={6}
-                      resize="none"
-                    />
-                  </FormControl>
-
-                  <Button
-                    colorScheme="blue"
-                    bg="blue.400"
-                    color="white"
-                    _hover={{
-                      bg: "blue.500",
-                    }}
-                    isFullWidth
-                  >
-                    Enviar mensaje
-                  </Button>
-                </VStack>
+                    <Button
+                      type="submit"
+                      disabled={state.submitting || state.succeeded}
+                      colorScheme="blue"
+                      bg={state.succeeded ? "blue.900" : "blue.400"}
+                      color="white"
+                      _hover={{
+                        bg: "blue.500",
+                      }}
+                      isFullWidth
+                    >
+                      {state.succeeded ? "Mensaje enviado!" : "Enviar mensaje"}
+                    </Button>
+                  </VStack>
+                </form>
               </Box>
             </Stack>
           </VStack>
