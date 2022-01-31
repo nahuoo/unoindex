@@ -34,6 +34,11 @@ export default function Home({data}) {
         <title>Uno Electromedicina</title>
         <meta name="description" content="Servicio tecnico de laboratorios" />
         <link rel="icon" href="/favicon.ico" />
+    <script
+          async
+          src="https://s.widgetwhats.com/wwwa.js"
+          data-wwwa="9487"
+        ></script>
       </Head>
       <main>
         <NavBar />
