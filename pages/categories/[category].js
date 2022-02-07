@@ -27,7 +27,10 @@ export default function category() {
         spacing={{ base: 8, md: 10 }}
         py={{ base: 18, md: 24 }}
       >
+        {/*
         <Stack spacing={{ base: 6, md: 10 }}>
+        
+  
           <Image
             rounded={"md"}
             alt={"product image"}
@@ -210,6 +213,9 @@ export default function category() {
             <Text>2-3 business days delivery</Text>
           </Stack>
         </Stack>
+
+        */}
+
       </SimpleGrid>
     </Container>
   );
