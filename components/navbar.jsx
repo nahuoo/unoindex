@@ -274,7 +274,7 @@ const NAV_ITEMS = [
       {
         label: "Agitadores",
         subLabel: "",
-        href: "categories/agitadores",
+        href: "/agitadores",
       },
       {
         label: "Autoanalizadores de quimica clinica",
