@@ -32,7 +32,7 @@ export default function Home({data}) {
     <div>
       <Head>
         <title>Uno Electromedicina</title>
-        <meta name="description" content="Servicio tecnico de laboratorios" />
+        <meta name="description" content="Servicio técnico de laboratorios" />
         <link rel="icon" href="/favicon.ico" />
     <script
           async

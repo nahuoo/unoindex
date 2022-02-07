@@ -52,6 +52,12 @@ export const Carrousel = () => {
       imageBase: "/BannerDiestroBase.png",
       image: "/BannerDiestro.png",
     },
+    {
+      title: "",
+      text: "",
+      imageBase: "/BannerWienerBase.png",
+      image: "/BannerWiener.png",
+    },
   ];
 
   return (
